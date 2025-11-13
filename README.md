@@ -234,3 +234,69 @@ enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus
 
     <img src="./escudo barça.jpg" alt="esto es una imagen de prueba"> <!--el alt muestra un texto por si no aparece la imagen-->
     
+<!--ejemplo de codigo de formulari abajo-->
+
+
+    <h1>Contacta amb nosaltres</h1>
+<form action="processa.html" method="get">
+   <fieldset>
+      <legend>Dades personals</legend>
+      <div> 
+         <label for="nom">Escriu el teu nom: </label> 
+         <input type="text" name="nom" size="30" maxlength="100" id="nom"/> 
+      </div>
+      <div> 
+         <label for="contrasenya">Escriu la teva contrasenya: </label> 
+         <input type="password" name="contrasenya" size="10" maxlength="15" id="contrasenya"/> 
+      </div>
+      <div> 
+         Edat: 
+         <input type="radio" name="edat" id="edat_menor" value="menor" /> 
+         <label for="edat_menor">Menys de 18 anys </label> 
+         <input type="radio" name="edat" id="edat_major" value="major" checked="checked" /> 
+         <label for="edat_major">De 18 a 65 anys </label> 
+         <input type="radio" name="edat" id="edat_jubilat" value="jubilat" /> 
+         <label for="edat_jubilat">Més de 65 anys</label> 
+      </div>
+      <div>
+         <label for="municipi">On vius? </label> 
+         <select name="municipi" id="municipi">
+            <option value="Abella de la Conca">Abella de la Conca</option>
+            <option value="Abrera">Abrera</option>
+            <option value="Àger">Àger</option>
+            <option value="Agramunt">Agramunt</option>
+            <option value="Aguilar de Segarra">Aguilar de Segarra</option>
+            <option value="Agullana">Agullana</option>
+            <option value="Aiguafreda">Aiguafreda</option>
+            ... 
+         </select>
+      </div>
+      <div> 
+         <label for="foto">Envia'ns la teva foto: </label> 
+         <input type="file" name="foto" id="foto" /> 
+      </div>
+   </fieldset>
+   <fieldset>
+      <legend>Aficions</legend>
+      <div> 
+         Escull les teves aficions: 
+         <input type="checkbox" name="llegir" id="llegir" value="si" /> 
+         <label for="llegir">Llegir</label> 
+         <input type="checkbox" name="cine" id="cine" value="si" /> 
+ <label for="cine">Anar al cine</label> 
+         <input type="checkbox" name="trekking" id="trekking" value="si" /> 
+         <label for="trekking">Trekking</label> 
+      </div>
+   </fieldset>
+   <fieldset>
+      <legend><label for="comentari">Comentaris</label></legend>
+      <div> 
+         <textarea name="comentari" id="comentari" cols="30" rows="5">Escriu aquí els teus comentaris</textarea> 
+      </div>
+   </fieldset>
+   <div> 
+      <input type="reset" value="Esborrar formulari" /> 
+      <input type="submit" value="Enviar formulari" /> 
+   </div>
+</form>
+
