@@ -330,7 +330,7 @@ En mayo de 1998 se publicó el estándar CSS Level 2. Diez años después, en 20
 Actualmente se está trabajando con CSS3. En este caso, la especificación está dividida en módulos, algunos de los cuales ya se han convertido en estándares, mientras que otros aún están en desarrollo.xº
 
 
-CSS: Ubicación (1/4)
+CSS: Ubicación (1/4).
 
 Los estilos se pueden asociar de diferentes maneras a los elementos (X)HTML dado que se pueden ubicar las propiedades CSS en diferentes ubicaciones:
 
