@@ -406,3 +406,15 @@ Por último, si hay alguna definición de estilos “inline”, en la propia eti
 
 Se ha de tener en cuenta también que el orden dentro de cada estilo es importante, teniendo más prioridad “por regla general” los situados más abajo en el documento y que, en caso de que haya declaraciones sobre un mismo elemento en diferentes ámbitos que no sean contradictorias, éstas se suman.
 
+
+CSS: Prioridad (1/4)
+
+Podría darse el caso de que varias declaraciones CSS afectasen de forma diferente a un mismo elemento HTML, así pues, ¿cuál de ellas es la que tendrá preferencia?
+
+En primer lugar, se comprueba si existe una hoja de estilos externa asociada al documento HTML (estilo externo). Si no, estilos en otras ubicaciones son las que se ejecutarán.
+
+En segundo lugar, si hay alguna definición de estilos en el HEAD del documento HTML (estilo interno). En este caso, si alguna definición contradice a la definida en la hoja de estilos externa, tendrá prioridad la definición del estilo interno.
+
+Por último, si hay alguna definición de estilos “inline”, en la propia etiqueta HTML, en caso de contradicción, tendrá prioridad la definida en la propia etiqueta.
+
+Se ha de tener en cuenta también que el orden dentro de cada estilo es importante, teniendo más prioridad “por regla general” los situados más abajo en el documento y que en caso de que haya declaraciones sobre un mismo elemento en diferentes ámbitos que no sean contradictorias, estas se combinarán.
