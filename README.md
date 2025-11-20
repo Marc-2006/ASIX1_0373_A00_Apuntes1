@@ -300,3 +300,23 @@ enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus
    </div>
 </form>
 
+
+
+NUEVO APARTADO CSS css:
+
+CSS: Evolución y función (1/2)
+
+En los orígenes de la web, HTML era muy sencillo y fácil de aprender y no era capaz de representar recursos gráficos para añadir a la información textual. Eso fue cambiando a medida que el número de sitios web fueron creciendo y con ellos la cantidad de etiquetas que HTML se necesitaba para construir sitios cada vez más atractivos. Se tenían que incluir nuevas etiquetas destinadas a conseguir efectos visuales.
+
+Para evitar que HTML fuese el responsable de la parte estética y visual de la web se idearon las hojas de estilo y el lenguaje CSS (Cascading Style Sheets).
+
+Mientras que HTML estructura el documento e indica a los navegadores la función de un elemento en concreto (un vínculo, un título, …), el CSS da instrucciones al navegador sobre cómo ha de mostrar un elemento concreto: estilo, espaciado, posición…
+
+La versión Transicional de (X)HTML tiene etiquetas relacionadas con la visualización y la presentación de la web, pero es mejor no usar este tipo de etiquetas ya que mezclan la estructura y la presentación del documento.
+
+CSS no es un lenguaje de programación como JavaScript ni un lenguaje de etiquetas como HTML.
+
+
+
+
+
