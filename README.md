@@ -302,7 +302,11 @@ enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus
 
 
 
-NUEVO APARTADO CSS css:
+NUEVO APARTADO CSS:
+
+
+
+
 
 CSS: Evolución y función (1/2)
 
@@ -317,6 +321,88 @@ La versión Transicional de (X)HTML tiene etiquetas relacionadas con la visualiz
 CSS no es un lenguaje de programación como JavaScript ni un lenguaje de etiquetas como HTML.
 
 
+CSS: Evolución y función (2/2)
+
+Lo que ahora conocemos como CSS apareció cuando el W3C recibió 9 propuestas diferentes para hojas de estilo, de las cuales seleccionó dos: Cascading HTML Style Sheets (CHSS), propuesta por Håkon Wium Lie en 1994, y Stream-based Style Sheet Proposal (SSP). De ahí nacieron las Cascading Style Sheets (CSS), cuya primera versión, denominada CSS Level 1, fue propuesta como estándar a finales del año 1996.
+
+En mayo de 1998 se publicó el estándar CSS Level 2. Diez años después, en 2008, se realizó una revisión y se publicó el CSS Level 2 Revision 1, conocido como CSS2.1.
+
+Actualmente se está trabajando con CSS3. En este caso, la especificación está dividida en módulos, algunos de los cuales ya se han convertido en estándares, mientras que otros aún están en desarrollo.xº
 
 
+CSS: Ubicación (1/4)
+
+Los estilos se pueden asociar de diferentes maneras a los elementos (X)HTML dado que se pueden ubicar las propiedades CSS en diferentes ubicaciones:
+
+Estilo “inline”. En la propia etiqueta.
+
+Estilo “interno”. En la cabecera del documento (X)HTML.
+
+Estilo “externo”. En un documento externo.
+
+
+En la etiqueta HTML: (estilo “INLINE”). Se añaden las propiedades CSS directamente en el elemento usando el atributo “style”. Por ejemplo:
+
+<p style="text-align:center; color:red">Paràgraf centrat vermell</p>
+
+CSS: Ubicación (3/4)
+
+En la cabecera del documento (X)HTML: (estilo INTERNO) Podemos poner diferentes propiedades CSS dentro del elemento <style>, dentro del elemento <head> del documento. Por ejemplo:
+
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <!-- ... -->
+    <style>
+        p {
+            text-align: center;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <p>Párrafo centrado rojo</p>
+    <p>Párrafo centrado rojo</p>
+    <p>Párrafo centrado rojo</p>
+</body>
+</html>
+
+
+CSS: Ubicación (4/4)
+
+En un documento externo: (estilo externo) Se colocan las propiedades de estilo en un documento externo con extensión .css y desde el documento (X)HTML se enlaza con esta hoja de estilo con la etiqueta <link> dentro del elemento <head>. Por ejemplo:
+
+El documento (X)HTML tendría el siguiente aspecto:
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="estils.css" type="text/css" />
+</head>
+<body>
+    <p>Paràgraf centrat vermell</p>
+</body>
+</html>
+
+
+El fichero estils.css tendría el siguiente contenido:
+
+p {
+    text-align: center;
+    color: red;
+}
+
+
+
+CSS: Prioridad (1/4)
+
+Podría darse el caso de que varias declaraciones CSS afectasen de forma diferente a un mismo elemento HTML, así pues, ¿cuál de ellas es la que tendrá preferencia?
+
+En primer lugar, se comprueba si existe una hoja de estilos externa asociada al documento HTML (estilo externo). Si no, estilos en otras ubicaciones son las que se ejecutarán.
+
+En segundo lugar, si hay alguna definición de estilos en el HEAD del documento HTML (estilo interno). En este caso, si alguna definición contradice a la definida en la hoja de estilos externa, tendrá prioridad la definición del estilo interno.
+
+Por último, si hay alguna definición de estilos “inline”, en la propia etiqueta HTML, en caso de contradicción, tendrá prioridad la definida en la propia etiqueta.
+
+Se ha de tener en cuenta también que el orden dentro de cada estilo es importante, teniendo más prioridad “por regla general” los situados más abajo en el documento y que, en caso de que haya declaraciones sobre un mismo elemento en diferentes ámbitos que no sean contradictorias, éstas se suman.
 
