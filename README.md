@@ -418,3 +418,7 @@ En segundo lugar, si hay alguna definición de estilos en el HEAD del documento 
 Por último, si hay alguna definición de estilos “inline”, en la propia etiqueta HTML, en caso de contradicción, tendrá prioridad la definida en la propia etiqueta.
 
 Se ha de tener en cuenta también que el orden dentro de cada estilo es importante, teniendo más prioridad “por regla general” los situados más abajo en el documento y que en caso de que haya declaraciones sobre un mismo elemento en diferentes ámbitos que no sean contradictorias, estas se combinarán.
+
+
+
+

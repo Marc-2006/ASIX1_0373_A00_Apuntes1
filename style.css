@@ -1,6 +1,23 @@
- p{
+ p {
 
-            color: rgb(11, 234, 67);
-            font-size: 25px;
+    font-size: 14px;
 
-        }
+}
+
+
+h1, h2, p{
+
+    color: red;
+
+
+}
+
+
+
+
+span {
+
+    font-weight: bold;
+
+}
+
