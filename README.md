@@ -1,3 +1,33 @@
+Git es un sistema de control de versiones descentralizado. Su función principal es registrar los cambios realizados en archivos de código a lo largo del tiempo.
+
+Utilidad: Permite volver a versiones anteriores, trabajar en diferentes ramas (features) sin romper el código principal y coordinar el trabajo entre varios desarrolladores.
+
+Comandos básicos usados:
+
+git init: Inicializa un repositorio local en la carpeta actual.
+
+git add .: Prepara todos los archivos modificados para el siguiente "commit" (foto del estado actual).
+
+git commit -m "mensaje": Guarda los cambios en el historial local con una descripción.
+
+git push: Sube los cambios del repositorio local al servidor remoto (GitHub).
+
+¿Qué es GitHub? (La plataforma)
+GitHub es una plataforma de alojamiento en la nube que utiliza la tecnología Git.
+
+Función: Actúa como un servidor donde guardamos nuestros proyectos (repositorios) para que estén accesibles desde cualquier lugar, facilitando la colaboración, el despliegue de webs y el control de proyectos mediante una interfaz gráfica.
+
+Lenguaje de Marcado: Markdown
+
+    Encabezados: Se definen mediante almohadillas (#). A mayor número de #, menor es el tamaño del título (del H1 al H6).
+
+Énfasis: Se usa el asterisco * o el guion bajo _. Doble símbolo para negrita y símbolo simple para cursiva.
+
+Listas: Se usan números para listas ordenadas y guiones o asteriscos para listas desordenadas (bullets).
+
+No entiendo muy bien que es el marckdown pero bueno 
+
+
 # ASIX1_0373_A00_Apuntes1
 repositorio para entregar los apuntes por primera vez
 
@@ -418,6 +448,130 @@ En segundo lugar, si hay alguna definición de estilos en el HEAD del documento 
 Por último, si hay alguna definición de estilos “inline”, en la propia etiqueta HTML, en caso de contradicción, tendrá prioridad la definida en la propia etiqueta.
 
 Se ha de tener en cuenta también que el orden dentro de cada estilo es importante, teniendo más prioridad “por regla general” los situados más abajo en el documento y que en caso de que haya declaraciones sobre un mismo elemento en diferentes ámbitos que no sean contradictorias, estas se combinarán.
+
+
+
+
+5. Profundización en HTML: Teoría y Estructura
+¿Qué es realmente HTML?
+Las siglas significan HyperText Markup Language (Lenguaje de Marcas de Hipertexto):
+
+HyperText: Texto que contiene enlaces a otros recursos o páginas.
+
+Markup: El contenido se organiza y estructura mediante etiquetas.
+
+Language: Posee reglas y una estructura gramatical propia.
+
+Importante: HTML no es un lenguaje de programación, ya que carece de lógica (bucles, condiciones o funciones). Su única función es describir y estructurar el contenido.
+
+Anatomía de un Elemento HTML
+Un elemento estándar se compone de:
+
+Etiqueta de apertura: <p>
+
+Contenido: El texto o recurso que queremos mostrar.
+
+Etiqueta de cierre: </p> (Notar la barra inclinada /).
+
+Existen elementos vacíos que no tienen contenido ni cierre, como <img>, <br> o <input>.
+
+Atributos
+Los atributos ofrecen información extra sobre un elemento. Siempre se escriben en la etiqueta de apertura con el formato nombre="valor".
+
+Ejemplos comunes: class, id, src, alt, href.
+
+6. Estructura Global de un Documento
+Todo archivo HTML debe seguir este esquema jerárquico:
+
+<!DOCTYPE html>: Declaración obligatoria que indica al navegador que el documento es HTML5.
+
+<html>: El elemento raíz que envuelve todo el código.
+
+<head>: El "cerebro" oculto. Contiene metadatos:
+
+<meta charset="utf-8">: Permite mostrar tildes y caracteres especiales.
+
+<title>: El nombre que aparece en la pestaña del navegador (clave para el SEO).
+
+<link>: Para conectar archivos CSS o el favicon (icono de la pestaña).
+
+<style>: Para escribir CSS interno.
+
+<body>: El "cuerpo" visible. Contiene todo lo que el usuario ve (textos, imágenes, botones).
+
+Enlaces y Navegación (<a>)
+El sistema de navegación se basa en el Hipertexto.
+
+Externos: Enlazan a otras webs usando href="URL".
+
+Locales: Enlazan a páginas del propio sitio usando rutas relativas.
+
+Anclas (Internos): Enlazan a un punto específico de la misma página.
+
+Se crea el destino con un ID: <h2 id="contacto">Contacto</h2>
+
+Se crea el enlace usando almohadilla: <a href="#contacto">Ir al pie</a>
+
+
+Formularios Avanzados (<form>)
+Permiten captar datos del usuario. Los atributos principales del contenedor son:
+
+action: URL donde se envían los datos.
+
+method: GET (datos visibles en URL) o POST (datos ocultos, más seguro).
+
+target: _self (abre en la misma pestaña) o _blank (nueva pestaña).
+
+Atributos del <input>:
+name: Identificador del dato para el servidor (fundamental).
+
+value: Valor predeterminado.
+
+placeholder: Texto de ayuda grisáceo.
+
+required: Obliga al usuario a rellenar el campo.
+
+readonly / disabled: Bloquean la edición del campo.
+
+
+
+Para que tu trabajo no parezca un "copia y pega" de una lista de definiciones, he redactado la información de las tablas de una forma más narrativa y técnica, explicando para qué sirve cada etiqueta y cómo se estructuran jerárquicamente.
+
+Aquí tienes el texto listo para tu documento:
+
+10. Estructura de Datos: Tablas en HTML
+Las tablas en HTML se utilizan para organizar información en filas y columnas. Su estructura es jerárquica, lo que significa que unas etiquetas deben contener a otras necesariamente para que la tabla sea válida y accesible.
+
+El contenedor principal: <table>
+Es la etiqueta que envuelve toda la estructura. Antiguamente se usaban atributos como border (grosor del borde) o width (ancho), aunque hoy en día lo ideal es controlar estos aspectos mediante CSS.
+
+Organización Semántica (Agrupación)
+Para que el navegador y los lectores de pantalla entiendan mejor los datos, dividimos la tabla en tres secciones principales:
+
+<thead> (Encabezado): Se sitúa en la parte superior y agrupa las filas que contienen los títulos de las columnas.
+
+<tbody> (Cuerpo): Es el corazón de la tabla donde reside la información principal. Permite separar el contenido real de los encabezados.
+
+<tfoot> (Pie): Se usa al final de la tabla para mostrar totales, resúmenes o información legal.
+
+Estructura de Filas y Celdas
+Dentro de los grupos anteriores, los datos se organizan mediante:
+
+<tr> (Table Row): Define una fila horizontal. Puede llevar atributos de alineación como align (horizontal) o valign (vertical), además de bgcolor para el color de fondo.
+
+<th> (Table Header): Es una celda especial para encabezados. El texto suele aparecer en negrita y centrado por defecto.
+
+<td> (Table Data): Es la celda estándar que contiene los datos de la tabla.
+
+Atributos de Expansión (Gestión de Celdas Complejas)
+Para crear tablas donde una celda ocupe más de un espacio, utilizamos dos atributos clave:
+
+colspan: Permite que una celda se expanda horizontalmente a través de varias columnas.
+
+rowspan: Permite que una celda se expanda verticalmente a través de varias filas.
+
+Descripción y Título: <caption>
+Esta etiqueta se coloca inmediatamente después de abrir <table>. Su función es proporcionar un título descriptivo o leyenda a la tabla, mejorando la accesibilidad. Se puede alinear respecto a la tabla con el atributo align.
 
 
 
