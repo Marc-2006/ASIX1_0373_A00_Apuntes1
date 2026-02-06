@@ -1,33 +1,3 @@
-Git es un sistema de control de versiones descentralizado. Su función principal es registrar los cambios realizados en archivos de código a lo largo del tiempo.
-
-Utilidad: Permite volver a versiones anteriores, trabajar en diferentes ramas (features) sin romper el código principal y coordinar el trabajo entre varios desarrolladores.
-
-Comandos básicos usados:
-
-git init: Inicializa un repositorio local en la carpeta actual.
-
-git add .: Prepara todos los archivos modificados para el siguiente "commit" (foto del estado actual).
-
-git commit -m "mensaje": Guarda los cambios en el historial local con una descripción.
-
-git push: Sube los cambios del repositorio local al servidor remoto (GitHub).
-
-¿Qué es GitHub? (La plataforma)
-GitHub es una plataforma de alojamiento en la nube que utiliza la tecnología Git.
-
-Función: Actúa como un servidor donde guardamos nuestros proyectos (repositorios) para que estén accesibles desde cualquier lugar, facilitando la colaboración, el despliegue de webs y el control de proyectos mediante una interfaz gráfica.
-
-Lenguaje de Marcado: Markdown
-
-    Encabezados: Se definen mediante almohadillas (#). A mayor número de #, menor es el tamaño del título (del H1 al H6).
-
-Énfasis: Se usa el asterisco * o el guion bajo _. Doble símbolo para negrita y símbolo simple para cursiva.
-
-Listas: Se usan números para listas ordenadas y guiones o asteriscos para listas desordenadas (bullets).
-
-No entiendo muy bien que es el marckdown pero bueno 
-
-
 # ASIX1_0373_A00_Apuntes1
 repositorio para entregar los apuntes por primera vez
 
@@ -89,7 +59,7 @@ enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus
     
     -->
 
-   
+
     # H1 - encabezado principal 
 
 
@@ -106,7 +76,7 @@ enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus
 
 
     ###### H6 - encabezado mas pequeño que el anterior
-    
+
 
     <table border="1">
         <thead>
@@ -243,7 +213,7 @@ enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus
     dolores quas blanditiis autem at! Ipsum tempora v
     oluptatibus laborum?
     </p>
-    
+
 </p>
 
 <ol> <!--lista ordenada-->
@@ -263,7 +233,7 @@ enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus
 </ul>
 
     <img src="./escudo barça.jpg" alt="esto es una imagen de prueba"> <!--el alt muestra un texto por si no aparece la imagen-->
-    
+
 <!--ejemplo de codigo de formulari abajo-->
 
 
@@ -450,129 +420,433 @@ Por último, si hay alguna definición de estilos “inline”, en la propia eti
 Se ha de tener en cuenta también que el orden dentro de cada estilo es importante, teniendo más prioridad “por regla general” los situados más abajo en el documento y que en caso de que haya declaraciones sobre un mismo elemento en diferentes ámbitos que no sean contradictorias, estas se combinarán.
 
 
+A partir de aqui empiezan los apuntes de css: 
 
 
-5. Profundización en HTML: Teoría y Estructura
-¿Qué es realmente HTML?
-Las siglas significan HyperText Markup Language (Lenguaje de Marcas de Hipertexto):
+1. Evolución y Función de CSS
+¿Qué es CSS?
+CSS (Cascading Style Sheets) es un lenguaje de hojas de estilo diseñado para separar la presentación de la estructura en el desarrollo web.
 
-HyperText: Texto que contiene enlaces a otros recursos o páginas.
-
-Markup: El contenido se organiza y estructura mediante etiquetas.
-
-Language: Posee reglas y una estructura gramatical propia.
-
-Importante: HTML no es un lenguaje de programación, ya que carece de lógica (bucles, condiciones o funciones). Su única función es describir y estructurar el contenido.
-
-Anatomía de un Elemento HTML
-Un elemento estándar se compone de:
-
-Etiqueta de apertura: <p>
-
-Contenido: El texto o recurso que queremos mostrar.
-
-Etiqueta de cierre: </p> (Notar la barra inclinada /).
-
-Existen elementos vacíos que no tienen contenido ni cierre, como <img>, <br> o <input>.
-
-Atributos
-Los atributos ofrecen información extra sobre un elemento. Siempre se escriben en la etiqueta de apertura con el formato nombre="valor".
-
-Ejemplos comunes: class, id, src, alt, href.
-
-6. Estructura Global de un Documento
-Todo archivo HTML debe seguir este esquema jerárquico:
-
-<!DOCTYPE html>: Declaración obligatoria que indica al navegador que el documento es HTML5.
-
-<html>: El elemento raíz que envuelve todo el código.
-
-<head>: El "cerebro" oculto. Contiene metadatos:
-
-<meta charset="utf-8">: Permite mostrar tildes y caracteres especiales.
-
-<title>: El nombre que aparece en la pestaña del navegador (clave para el SEO).
-
-<link>: Para conectar archivos CSS o el favicon (icono de la pestaña).
-
-<style>: Para escribir CSS interno.
-
-<body>: El "cuerpo" visible. Contiene todo lo que el usuario ve (textos, imágenes, botones).
-
-Enlaces y Navegación (<a>)
-El sistema de navegación se basa en el Hipertexto.
-
-Externos: Enlazan a otras webs usando href="URL".
-
-Locales: Enlazan a páginas del propio sitio usando rutas relativas.
-
-Anclas (Internos): Enlazan a un punto específico de la misma página.
-
-Se crea el destino con un ID: <h2 id="contacto">Contacto</h2>
-
-Se crea el enlace usando almohadilla: <a href="#contacto">Ir al pie</a>
+HTML: Define la estructura del documento e indica la función de cada elemento (vínculos, títulos, párrafos, etc.)
+CSS: Da instrucciones al navegador sobre cómo mostrar cada elemento (estilo, espaciado, posición, etc.)
 
 
-Formularios Avanzados (<form>)
-Permiten captar datos del usuario. Los atributos principales del contenedor son:
+Nota importante: CSS NO es un lenguaje de programación como JavaScript, ni un lenguaje de etiquetas como HTML.
 
-action: URL donde se envían los datos.
+Historia y Evolución
+AñoVersiónDetalles1994Propuesta inicialHåkon Wium Lie propone CHSS (Cascading HTML Style Sheets)1996CSS Level 1Primera versión estándar publicada por el W3C1998CSS Level 2Publicación del estándar CSS22008CSS 2.1Revisión del CSS Level 2 (CSS2.1)ActualidadCSS3Dividido en módulos, algunos ya son estándares
+Ventajas e Inconvenientes
+✅ Ventajas
 
-method: GET (datos visibles en URL) o POST (datos ocultos, más seguro).
+Mantenibilidad: Código más fácil de mantener
+Potencia: Mayor capacidad de diseño que las etiquetas HTML
+Simplicidad: Lenguaje sencillo de aprender
+Versatilidad: Diferentes hojas de estilo para un mismo documento (pantalla, impresión, etc.)
+Reutilización: Posibilidad de usar la misma hoja de estilo en múltiples documentos
 
-target: _self (abre en la misma pestaña) o _blank (nueva pestaña).
+⚠️ Inconvenientes
 
-Atributos del <input>:
-name: Identificador del dato para el servidor (fundamental).
-
-value: Valor predeterminado.
-
-placeholder: Texto de ayuda grisáceo.
-
-required: Obliga al usuario a rellenar el campo.
-
-readonly / disabled: Bloquean la edición del campo.
-
+Incompatibilidad entre navegadores: No todos los navegadores interpretan CSS de la misma manera
+Estándares: Algunos navegadores no cumplen completamente con los estándares
+Solución: Obligación de crear diferentes hojas de estilo según el navegador
 
 
-Para que tu trabajo no parezca un "copia y pega" de una lista de definiciones, he redactado la información de las tablas de una forma más narrativa y técnica, explicando para qué sirve cada etiqueta y cómo se estructuran jerárquicamente.
+2. Ubicación de los Estilos CSS
+Existen tres formas de aplicar estilos CSS a un documento HTML:
+2.1. Estilo Inline (En la etiqueta)
+Se añaden directamente en el elemento HTML usando el atributo style.
+html<p style="text-align:center; color:red">Párrafo centrado rojo</p>
+2.2. Estilo Interno (En la cabecera)
+Se colocan dentro del elemento <style> en el <head> del documento.
+html<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <style>
+        p {
+            text-align: center;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <p>Párrafo centrado rojo</p>
+    <p>Párrafo centrado rojo</p>
+    <p>Párrafo centrado rojo</p>
+</body>
+</html>
+2.3. Estilo Externo (Archivo .css)
+Se crea un archivo externo con extensión .css y se enlaza desde el HTML con la etiqueta <link>.
+Archivo HTML:
+html<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="estils.css" type="text/css" />
+</head>
+<body>
+    <p>Párrafo centrado rojo</p>
+</body>
+</html>
+Archivo estils.css:
+cssp {
+    text-align: center;
+    color: red;
+}
 
-Aquí tienes el texto listo para tu documento:
+3. Prioridad y Cascada en CSS
+Orden de Prioridad (de menor a mayor)
+Cuando varias declaraciones CSS afectan a un mismo elemento, se aplica el siguiente orden de prioridad:
+PrioridadUbicaciónDescripción1️⃣ (Baja)Estilo externoHoja de estilos externa (archivo .css)2️⃣ (Media)Estilo internoDefiniciones en el <head> del documento3️⃣ (Alta)Estilo inlineDefiniciones en la propia etiqueta HTML🔴 (Máxima)!importantSobrescribe todas las demás reglas
+Factores que Determinan la Prioridad
 
-10. Estructura de Datos: Tablas en HTML
-Las tablas en HTML se utilizan para organizar información en filas y columnas. Su estructura es jerárquica, lo que significa que unas etiquetas deben contener a otras necesariamente para que la tabla sea válida y accesible.
+Especificidad: Cuanto más específico sea el selector, mayor prioridad
+Orden de aparición: Las reglas situadas más abajo tienen prioridad
+Reglas importantes: El uso de !important
+Herencia: Propiedades heredadas de elementos padres
 
-El contenedor principal: <table>
-Es la etiqueta que envuelve toda la estructura. Antiguamente se usaban atributos como border (grosor del borde) o width (ancho), aunque hoy en día lo ideal es controlar estos aspectos mediante CSS.
+Ejemplo Práctico de Prioridad
+HTML:
+html<div id="main" class="box">
+    <h1 style="color: green;">Hello</h1>
+</div>
+CSS:
+cssh1 { color: blue; }              /* Especificidad: 1 */
+.box h1 { color: yellow; }       /* Especificidad: 11 */
+#main h1 { color: orange; }      /* Especificidad: 101 */
+h1 { color: red !important; }    /* Sobrescribe todo */
+```
 
-Organización Semántica (Agrupación)
-Para que el navegador y los lectores de pantalla entiendan mejor los datos, dividimos la tabla en tres secciones principales:
+**Resultado**: El `h1` se verá de color **rojo** debido al uso de `!important`.
 
-<thead> (Encabezado): Se sitúa en la parte superior y agrupa las filas que contienen los títulos de las columnas.
+---
 
-<tbody> (Cuerpo): Es el corazón de la tabla donde reside la información principal. Permite separar el contenido real de los encabezados.
+## 4. Sintaxis Básica de CSS
 
-<tfoot> (Pie): Se usa al final de la tabla para mostrar totales, resúmenes o información legal.
+### Estructura de una Regla CSS
 
-Estructura de Filas y Celdas
-Dentro de los grupos anteriores, los datos se organizan mediante:
+Una regla CSS está compuesta por:
+```
+selector {
+    propiedad1: valor1;
+    propiedad2: valor2;
+}
+ComponenteDescripciónSelectorDefine qué elemento(s) se verán afectadosDeclaraciónConjunto de propiedades y valoresPropiedadCaracterística a modificar (color, tamaño, etc.)ValorValor asignado a la propiedad
+Ejemplo Desglosado
+cssp {
+    font-size: 10pt;
+    background-color: gray;
+}
+Desglose:
 
-<tr> (Table Row): Define una fila horizontal. Puede llevar atributos de alineación como align (horizontal) o valign (vertical), además de bgcolor para el color de fondo.
+Selector: p (todos los párrafos)
+Primera declaración: font-size: 10pt;
 
-<th> (Table Header): Es una celda especial para encabezados. El texto suele aparecer en negrita y centrado por defecto.
+Propiedad: font-size
+Valor: 10pt
 
-<td> (Table Data): Es la celda estándar que contiene los datos de la tabla.
 
-Atributos de Expansión (Gestión de Celdas Complejas)
-Para crear tablas donde una celda ocupe más de un espacio, utilizamos dos atributos clave:
+Segunda declaración: background-color: gray;
 
-colspan: Permite que una celda se expanda horizontalmente a través de varias columnas.
-
-rowspan: Permite que una celda se expanda verticalmente a través de varias filas.
-
-Descripción y Título: <caption>
-Esta etiqueta se coloca inmediatamente después de abrir <table>. Su función es proporcionar un título descriptivo o leyenda a la tabla, mejorando la accesibilidad. Se puede alinear respecto a la tabla con el atributo align.
+Propiedad: background-color
+Valor: gray
 
 
 
+Comentarios en CSS
+Los comentarios en CSS se escriben entre /* y */ y pueden ocupar varias líneas:
+css/* Este es un comentario de una línea */
+
+/* 
+   Este es un comentario
+   de múltiples líneas
+*/
+
+selector {
+    propiedad1: valor; /* Comentario al final de la línea */
+    propiedad2: valor;
+}
+
+5. Tipos de Selectores
+Selectores Básicos
+5.1. Selector de Elementos (Tipo)
+Selecciona todos los elementos de un tipo específico.
+css/* Afecta a todos los elementos <a> del documento */
+a {
+    color: red;
+}
+5.2. Selector de ID
+Selecciona un único elemento con un ID específico. Se utiliza el símbolo #.
+css#example {
+    property: value;
+    property2: value2;
+}
+HTML correspondiente:
+html<p id="example">Este párrafo tiene el ID "example"</p>
+
+⚠️ Importante: Los IDs deben ser únicos en el documento. No se pueden repetir.
+
+5.3. Selector de Clase
+Selecciona todos los elementos con una clase específica. Se utiliza el símbolo ..
+css.example {
+    property: value;
+    property2: value2;
+}
+HTML correspondiente:
+html<p class="example">Párrafo con clase</p>
+<li class="example">Item de lista con clase</li>
+<div class="example">Div con clase</div>
+
+Selectores Avanzados
+5.4. Selector Universal
+Selecciona todos los elementos de la página. Se utiliza el símbolo *.
+css* {
+    border: 1px solid #000000;
+}
+5.5. Selectores de Atributos
+Seleccionan elementos según sus atributos.
+css/* Selecciona todos los <img> que tienen atributo "alt" */
+img[alt] {
+    border: 1px solid #000000;
+}
+
+/* Selecciona <img> con src específico */
+img[src="alert.gif"] {
+    border: 1px solid #000000;
+}
+CSS3 permite selecciones más avanzadas:
+
+Al principio del valor
+Al final del valor
+En cualquier parte del valor
+
+5.6. Selectores de Hijos
+Seleccionan elementos que son hijos directos de otro elemento. Se utiliza el símbolo >.
+css/* Selecciona <strong> que son hijos directos de <h3> */
+h3 > strong {
+    color: blue;
+}
+Ejemplo con nth-child:
+html<div class="parent">
+    <p>Primer hijo (p)</p>
+    <div>Segundo hijo (div)</div>
+    <span>Tercer hijo (span)</span>
+    <div>Cuarto hijo (div)</div>
+    <p>Quinto hijo (p)</p>
+</div>
+css.parent > :nth-child(4) {
+    color: red; /* Afecta al cuarto hijo directo */
+}
+5.7. Selectores de Descendientes
+Seleccionan elementos que están dentro de otro elemento (no necesariamente hijos directos). Se utiliza un espacio.
+css/* Selecciona todos los <em> dentro de <div> */
+div em {
+    color: blue;
+}
+Comparación: Hijos vs Descendientes
+html<div>
+    <em>hello</em>
+    <p>In this paragraph I will say <em>goodbye</em></p>
+</div>
+SelectorAfecta adiv > emSolo "hello" (hijo directo)div em"hello" y "goodbye" (todos los descendientes)
+5.8. Selectores de Hermanos Adyacentes
+Seleccionan elementos que aparecen inmediatamente después de otro elemento al mismo nivel. Se utiliza el símbolo +.
+html<h1>Encabezado 1</h1>
+<h2>Encabezado 2 (hermano adyacente)</h2>
+<h2>Encabezado 2 (hermano no adyacente)</h2>
+css/* Solo afecta al primer <h2> después de <h1> */
+h1 + h2 {
+    margin-top: -5mm;
+}
+5.9. Pseudoclases
+Definen estilos para estados específicos de los elementos. Se utiliza el símbolo :.
+Pseudoclases comunes para enlaces:
+PseudoclaseDescripción:linkEstado normal por defecto de los enlaces:visitedEnlaces ya visitados:focusElemento con el foco del cursor:hoverElemento sobre el que está el puntero del ratón:activeElemento en el momento de hacer clic
+cssa:link {
+    color: blue;
+}
+
+a:visited {
+    color: purple;
+}
+
+a:hover {
+    color: red;
+}
+
+a:focus {
+    outline: 2px solid orange;
+}
+5.10. Pseudoelementos
+Permiten aplicar estilos a partes específicas de un elemento. Se utilizan dos puntos dobles :: (en navegadores modernos).
+css/* Selecciona la primera línea de un <p> */
+p::first-line {
+    color: red;
+}
+
+/* Selecciona la primera letra */
+p::first-letter {
+    font-size: 2em;
+}
+```
+
+> **Nota**: Aunque se puede usar un solo `:` en navegadores antiguos, se recomienda `::` para diferenciarlos de las pseudoclases.
+
+---
+
+## 6. Modelo de Caja (Box Model)
+
+### Componentes del Modelo de Caja
+
+El modelo de caja CSS define cómo se representan los elementos en la página:
+```
+┌─────────────────────────────────┐
+│         MARGIN (margen)         │
+│  ┌───────────────────────────┐  │
+│  │    BORDER (borde)         │  │
+│  │  ┌─────────────────────┐  │  │
+│  │  │  PADDING (relleno)  │  │  │
+│  │  │  ┌───────────────┐  │  │  │
+│  │  │  │   CONTENT     │  │  │  │
+│  │  │  │  (contenido)  │  │  │  │
+│  │  │  └───────────────┘  │  │  │
+│  │  └─────────────────────┘  │  │
+│  └───────────────────────────┘  │
+└─────────────────────────────────┘
+6.1. Margin (Margen)
+Área transparente que rodea la caja y la separa de otros elementos.
+css/* Propiedad global */
+margin: 10px;
+
+/* Propiedades específicas */
+margin-top: 10px;
+margin-right: 20px;
+margin-bottom: 10px;
+margin-left: 20px;
+Valores posibles:
+TipoEjemploDescripciónPíxeles2pxValor fijo en píxelesem1emRelativo al font-size del elementorem1remRelativo al font-size del <html>Porcentaje5%Relativo al contenedor padreAutomáticoautoEl navegador calcula el margen
+
+⚠️ Nota: En elementos de línea (<span>), los márgenes superior e inferior son ignorados.
+
+6.2. Border (Borde)
+Define el estilo, grosor y color del borde del elemento.
+cssborder: [border-width || border-style || border-color | inherit];
+Propiedades específicas:
+cssborder-top: 1px solid black;
+border-right: 2px dashed red;
+border-bottom: 3px dotted blue;
+border-left: 1px solid green;
+Estilos de borde disponibles:
+ValorDescripciónnoneSin bordehiddenBorde ocultodottedPunteadodashedDiscontinuosolidSólidodoubleDoble líneagrooveRanura 3DridgeRelieve 3DinsetInsertado 3DoutsetResaltado 3D
+Características importantes:
+
+El grosor no puede ser negativo
+Los bordes entre dos bloques estáticos no colapsan
+Los bordes izquierdo y derecho de elementos en línea aparecen siempre al inicio y final
+
+6.3. Padding (Relleno)
+Espacio entre el borde del elemento y su contenido.
+css/* Propiedad global */
+padding: 15px;
+
+/* Propiedades específicas */
+padding-top: 10px;
+padding-right: 15px;
+padding-bottom: 10px;
+padding-left: 15px;
+Características:
+
+El valor nunca puede ser negativo
+El estilo del padding es transparente
+
+Formas Abreviadas de Escritura
+css/* Un valor: aplica a todos los lados */
+padding: 10px;
+
+/* Dos valores: vertical | horizontal */
+padding: 10px 20px;
+
+/* Tres valores: superior | horizontal | inferior */
+padding: 10px 3% 20px;
+
+/* Cuatro valores: superior | derecha | inferior | izquierda (sentido horario) */
+padding: 1px 3px 30px 5px;
+
+7. Display y Box-Sizing
+7.1. Display
+La propiedad display controla cómo se comporta un elemento en términos de su modelo de caja y flujo de diseño.
+Valores comunes:
+
+block: Elemento de bloque (ocupa todo el ancho disponible)
+inline: Elemento en línea (ocupa solo el espacio de su contenido)
+inline-block: Mezcla de ambos
+flex: Contenedor flexible
+grid: Contenedor de rejilla
+none: Oculta el elemento
+
+7.2. Box-Sizing
+Por defecto, el ancho y alto de una caja se calcula sumando: contenido + padding + border.
+css/* Por defecto */
+box-sizing: content-box;
+
+/* Recomendado para simplificar el maquetado */
+box-sizing: border-box;
+Ejemplo práctico:
+css.container {
+    width: 100px;
+    height: 100px;
+    background: #FFFFFF;
+    padding: 10px;
+    border: 10px solid #FF0000;
+}
+
+/* Con content-box: tamaño total = 140px (100 + 20 padding + 20 border) */
+/* Con border-box: tamaño total = 100px (incluye padding y border) */
+Práctica común:
+css* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+8. Flexbox
+Propiedades del Contenedor Padre
+css.container {
+    display: flex;
+}
+PropiedadDescripciónflex-directionDefine el eje principal (row, column, row-reverse, column-reverse)justify-contentAlinea elementos en el eje principal (flex-start, flex-end, center, space-between, space-around)align-itemsAlinea elementos en el eje transversal (flex-start, flex-end, center, stretch, baseline)align-contentAlinea múltiples líneas (similar a justify-content)flex-wrapPermite que los elementos se envuelvan (nowrap, wrap, wrap-reverse)
+Propiedades de los Elementos Hijos
+PropiedadDescripciónorderCambia el orden visual del elementoflex-growCapacidad del elemento para crecer (0 = no crece, 1+ = crece proporcionalmente)flex-shrinkCapacidad del elemento para encogerseflex-basisTamaño base del elemento antes de distribuir espacioalign-selfSobrescribe la alineación del contenedor para este elemento
+
+9. Diseño Responsive
+¿Qué es el Diseño Responsive?
+Técnica de diseño web que permite que un sitio se adapte automáticamente a diferentes tamaños de pantalla y dispositivos.
+Características Principales
+CaracterísticaDescripciónFlexible y adaptableEl diseño se ajusta al tamaño del dispositivoMedia queriesAplican estilos específicos según propiedades de la pantallaRejillas fluidasTamaños basados en porcentajes en lugar de valores fijosImágenes escalablesSe ajustan manteniendo proporción y legibilidad
+Media Queries
+Permiten aplicar estilos CSS según las características del dispositivo.
+Sintaxis básica:
+css@media (condición) {
+    /* Estilos CSS */
+}
+Ejemplo práctico:
+css/* Estilos generales (por defecto - pantallas grandes) */
+body {
+    background-color: blue;
+    color: white;
+}
+
+/* Pantallas medianas (tabletas - máximo 768px) */
+@media (max-width: 768px) {
+    body {
+        background-color: green;
+    }
+}
+
+/* Pantallas pequeñas (teléfonos - máximo 480px) */
+@media (max-width: 480px) {
+    body {
+        background-color: yellow;
+    }
+}
 
